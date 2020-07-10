@@ -43,9 +43,15 @@ namespace Maxcode.Quiz
             public IEnumerator<char> GetEnumerator() => _myLetters.GetEnumerator();
             IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-            /*
-             * Your code goes here
-             */
+            public void Add(char c)
+            {
+                _myLetters.Add(c);
+            }
+
+            public void Add(IEnumerable<char> chars)
+            {
+                _myLetters.AddRange(chars);
+            }
         }
     }
 }
